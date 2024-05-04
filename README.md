@@ -35,9 +35,3 @@ They have a list of 1000 new customers and they want to find out customers to ta
 2. Understanding target customer segment based on demographics and preferences
 3. Finding new customers with similar traits as target customers
 
-## Acknowledgements
-
- - [Awesome Readme Templates](https://awesomeopensource.com/project/elangosundar/awesome-README-templates)
- - [Awesome README](https://github.com/matiassingers/awesome-readme)
- - [How to write a Good readme](https://bulldogjob.com/news/449-how-to-write-a-good-readme-for-your-github-project)
-
