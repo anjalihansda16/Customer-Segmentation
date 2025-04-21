@@ -1,29 +1,52 @@
 
-# Customer Segmentation
-**Customer segmentation** is the process of dividing a customer base into groups of individuals who are similar in specific ways relevant to marketing, such as demographics, behaviors, or preferences. 
+# Customer Portfolio Analysis Report
 
-The purpose of segmentation is to better understand and target customers in order to improve marketing effectiveness, customer satisfaction, and ultimately, business performance.
+## Executive Summary
 
-## RFM analysis
-**RFM analysis** is a method used for customer segmentation based on their past purchasing behavior. RFM stands for Recency, Frequency, and Monetary Value:
+This report presents a comprehensive analysis of Sprocket Central’s customer portfolio, an Australian company specializing in bicycles and parts. The analysis leverages data from the `transactions`, `customer_demographic`, `customer_address`, and `new_customer_list` tables, utilized RFM (Recency, Frequency, Monetary) analysis to identify high-value customer segments and target 1,000 new prospects. The most profitable segments ("best customer," "active loyal customer," and "customer") are aged 35–44, located in New South Wales, work in Health, Manufacturing, or Financial Services, and belong to the Mass Customer wealth segment. They prefer the Solex brand, maintain an average purchase value of ~$1,100, and show consistent sales with slight peaks in April, August, October, and holiday-driven surges in November and December. A curated list of new customers matching these traits was developed to optimize marketing, enhance retention, and drive revenue growth.
 
-**Recency (R):** This refers to how recently a customer has made a purchase. Customers who have made purchases more recently are likely to be more engaged and responsive to marketing efforts.
+## Problem Statement
 
-**Frequency (F):** This measures how often a customer makes purchases. Customers who make frequent purchases are more likely to be loyal and valuable.
+Sprocket Central seeks to optimize its marketing efforts by identifying target customers from a list of 1,000 new prospects. The objectives are to:
 
-**Monetary Value (M)**: This reflects how much money a customer has spent. Customers who have spent more money are generally more valuable to the business.
+- Identify profitable customer segments from the existing customer base.
+- Understand the demographic and behavioral characteristics of these segments.
+- Identify new customers with similar traits for targeted marketing.
 
-In this analysis, the each of these three factors are scored on a scale of 1-4. Then the scores are combined to create 10 segments of customers. Higher the score of the customer segment more profitable they are for the business.
-The profitable customers should have low recency and high frequency and monetary value. Therefore, the recency score will be more when recency is low and frequency and monetary scores will be high when frequency and monetary values are high. 
+## Customer Segmentation
 
-# Problem Statement 
-**Sprocket Central** is an Australian company that sells bicycles and their parts. 
-They have a list of 1000 new customers and they want to find out customers to target for marketing efforts. 
+Customer segmentation involves dividing a customer base into groups with similar characteristics relevant to marketing, such as demographics, behaviors, or preferences. The purpose is to enhance marketing effectiveness, improve customer satisfaction, and drive business performance by tailoring strategies to specific groups.
 
-## Methodology 
-1. Finding target profitable cutomers segments from existing cutomer list
-2. Understanding target customer segment based on demographics and preferences
-3. Finding new customers with similar traits as target customers
+## RFM Analysis
+
+RFM (Recency, Frequency, Monetary) analysis is a method for segmenting customers based on past purchasing behavior:
+
+- **Recency (R)**: Measures how recently a customer made a purchase. Recent purchasers are typically more engaged and responsive.
+- **Frequency (F)**: Counts how often a customer purchases. Frequent buyers are often loyal and valuable.
+- **Monetary Value (M)**: Reflects total customer spend. Higher spenders are generally more profitable.
+
+Each metric was scored on a 1–4 scale, with 4 indicating the best performance (low recency, high frequency, high monetary value). These scores were combined to form an `rfm_score` (e.g., "444" for top performers), resulting in 10 distinct customer segments. Higher-scoring segments are more profitable, characterized by recent purchases, frequent transactions, and high spending.
+
+## Conceptual Analytical Approach
+
+The analysis followed a structured, data-driven methodology to derive actionable insights:
+
+1. **Data Profiling**: Explored the `transactions`, `customer_demographic`, `customer_address`, and `new_customer_list` datasets to assess structure, temporal scope, geographic distribution, and customer counts, ensuring a robust foundation.
+2. **RFM Analysis**: Applied the RFM framework to quantify customer engagement and value, scoring customers on recency, frequency, and monetary metrics to enable segmentation.
+3. **Customer Segmentation**: Categorized customers into segments (e.g., "best customer," "active loyal customer") based on RFM scores, identifying high-value groups for targeted strategies.
+4. **Targeted Segment Analysis and New Customer Identification**: Analyzed high-value segments ("best customer," "active loyal customer," and "customer") for demographic (e.g., age, location) and behavioral (e.g., brand preferences) characteristics, and identified new customers with matching traits for acquisition.
+
+This approach combined quantitative rigor with business relevance, using SQL-based analytics to transform raw data into strategic insights.
+
+## Methodology
+
+The analysis was executed in three phases:
+
+1. **Identifying Profitable Customer Segments**: Used RFM analysis to segment existing customers and pinpoint high-value groups.
+2. **Understanding Target Segments**: Analyzed demographics (age, location, job industry) and preferences (brand, product line, seasonal trends) of target segments.
+3. **Identifying New Customers**: Selected prospective customers from the `new_customer_list` with traits similar to high-value segments.
+
+
 
 # Findings
 Based on the RFM (Recency, Frequency, Monetary) analysis, the most profitable customers exhibit the following demographics and purchasing preferences:
