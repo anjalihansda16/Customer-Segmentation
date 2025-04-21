@@ -1,5 +1,5 @@
 
-# Customer Portfolio Analysis Report
+# Customer Segmentation for Strategic Marketing Optimization
 
 ## Executive Summary
 
